@@ -1,16 +1,16 @@
 ### CANE-pytorch
 
-A Pytorch implementation of [ACL2017 paper: "CANE: Context-Aware Network Embedding for Relation Modeling"](https://www.aclweb.org/anthology/P17-1158/), The original implementation in tensorflow can be found at https://github.com/thunlp/CANE.
+A Pytorch implementation of [ACL2017 paper: "CANE: Context-Aware Network Embedding for Relation Modeling"](https://www.aclweb.org/anthology/P17-1158/). The original implementation in Tensorflow can be found at https://github.com/thunlp/CANE.
 
 #### Run
 
 Run the following command for training CANE:
 
-`python3 run.py --dataset [cora,HepTh,zhihu] --gpu gpu_id --ratio [0.15,0.25,...] --rho rho_value`
+`python run.py --dataset [cora,HepTh,zhihu] --gpu gpu_id --ratio [0.15,0.25,...] --rho rho_value`
 
 For example, you can train like:
 
-`python run.py --dataset zhihu --gpu 0 --ratio 0.55 --rho 1.0,0.3,0.3`
+`python run.py --dataset cora --gpu 0 --ratio 0.55 --rho 1.0,0.3,0.3`
 
 #### Experimental Results
 
@@ -20,7 +20,7 @@ The experimental results of link prediction
 | ----- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
 | cora  | 73.8 | 78.2 | 82.0 | 83.4 | 88.1 | 89.8 | 91.7 | 92.4 | 98.7 |
 | HepTh | 77.5 | 80.2 | 87.2 | 89.9 | 90.2 | 91.9 | 94.9 | 95.8 | 92.8 |
-| zhihu |      |      |      |      |      |      |      |      |      |
+| zhihu | 35.2 | 34.1 | 34.0 | 33.7 | 34.9 | 36.6 | 37.5 | 40.5 | 41.2 |
 
 The experimental results of node classification
 

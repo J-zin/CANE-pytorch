@@ -79,6 +79,8 @@ def main(args):
         text1, text2, text3 = Variable(LongTensor(text1)), Variable(LongTensor(text2)), Variable(LongTensor(text3))
 
         convA, convB, TA, TB = cane.get_emb(node1, node2, node3, text1, text2, text3)
+        # TA = torch.cat([TA, convA], dim=-1)
+        # TB = torch.cat([TB, convB], dim=-1)
         for i in range(config.batch_size):
             em = list(TA[i].data.cpu())
             embed[node1[i].item()].append(em)
